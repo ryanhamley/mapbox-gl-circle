@@ -70,7 +70,7 @@ myCircle.on('contextmenu', function (mapMouseEvent) {
 
 -   `center` **({lat: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), lng: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)} | \[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)])** Circle center as an object or `[lng, lat]` coordinates
 -   `radius` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** Meter radius
--   `options` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** 
+-   `options` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?**
     -   `options.editable` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Enable handles for changing center and radius (optional, default `false`)
     -   `options.minRadius` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** Minimum radius on user interaction (optional, default `10`)
     -   `options.maxRadius` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** Maximum radius on user interaction (optional, default `1100000`)
@@ -94,7 +94,7 @@ Subscribe to circle event.
         _'centerchanged'_ and _'radiuschanged'_, or a _MapMouseEvent_ on _'click'_ and _'contextmenu'_ events
 -   `onlyOnce` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Remove handler after first call (optional, default `false`)
 
-Returns **[MapboxCircle](#mapboxcircle)** 
+Returns **[MapboxCircle](#mapboxcircle)**
 
 #### once
 
@@ -105,7 +105,7 @@ Alias for registering event listener with _onlyOnce=true_, see [#on](#on).
 -   `event` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Event name
 -   `fn` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** Event handler
 
-Returns **[MapboxCircle](#mapboxcircle)** 
+Returns **[MapboxCircle](#mapboxcircle)**
 
 #### off
 
@@ -116,21 +116,22 @@ Unsubscribe to circle event.
 -   `event` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Event name
 -   `fn` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** Handler to be removed
 
-Returns **[MapboxCircle](#mapboxcircle)** 
+Returns **[MapboxCircle](#mapboxcircle)**
 
 #### addTo
 
 **Parameters**
 
 -   `map` **mapboxgl.Map** Target map for adding and initializing circle Mapbox GL layers/data/listeners.
+-   `beforeLayer` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** Target layer to add circle layer before in the layer stack (optional, default `undefined` [adds circle layer to end of layer stack])
 
-Returns **[MapboxCircle](#mapboxcircle)** 
+Returns **[MapboxCircle](#mapboxcircle)**
 
 #### remove
 
 Remove source data, layers and listeners from map.
 
-Returns **[MapboxCircle](#mapboxcircle)** 
+Returns **[MapboxCircle](#mapboxcircle)**
 
 #### getCenter
 
@@ -140,9 +141,9 @@ Returns **{lat: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 **Parameters**
 
--   `position` **{lat: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), lng: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)}** 
+-   `position` **{lat: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), lng: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)}**
 
-Returns **[MapboxCircle](#mapboxcircle)** 
+Returns **[MapboxCircle](#mapboxcircle)**
 
 #### getRadius
 
@@ -154,7 +155,7 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 -   `newRadius` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** Meter radius
 
-Returns **[MapboxCircle](#mapboxcircle)** 
+Returns **[MapboxCircle](#mapboxcircle)**
 
 #### getBounds
 
@@ -245,7 +246,7 @@ Returns **{sw: {lat: [number](https://developer.mozilla.org/en-US/docs/Web/JavaS
 
 ### v. 1.2.2
 
--   CI updates, now integrates with GitHub and builds reliably (with unique version names) under 
+-   CI updates, now integrates with GitHub and builds reliably (with unique version names) under
     <http://jenkins.smithmicro.io:8080/job/mapbox-gl-circle-multibranch/>
 
 ### v. 1.2.1
